@@ -14,32 +14,37 @@
 <body>
 
 <h1>Privacy Policy — Lottokamu</h1>
-<p class="effective-date">Effective date: September 19, 2026</p>
+<p class="effective-date">Effective date: September 27, 2026</p>
 
 <p>Lottokamu ("the app") is a Finnish lottery-results checker for Lotto, Eurojackpot, and Viking Lotto. This policy explains what data the app handles and why.</p>
 
 <h2>What the app collects</h2>
 <p>The app does not require an account, and does not collect your name, email address, or any other personal identifier.</p>
 
-<p><strong>Lottery numbers you enter.</strong> When you check a row of numbers against a draw, the numbers and the game type are sent to our backend (Firebase Cloud Functions) to look up the matching draw results. This is not linked to any personal identity — there is no account or device identifier attached to it.</p>
+<p><strong>Lottery numbers you enter.</strong> Checking a row against the most recent draw happens entirely on your device. Checking a row against every past draw sends the numbers and the game to our backend (Firebase Cloud Functions), which queries the stored draw results for a match. Numbers sent this way are used only to answer that one query — they are not saved to any record, and there is no account or device identifier attached to them.</p>
 
 <p><strong>Camera photos (ticket scanning).</strong> If you use the camera to scan a physical ticket, the photo is processed entirely on your device using on-device text recognition. The photo and any text read from it are never uploaded or sent anywhere — they stay on your device and are discarded after the scan.</p>
 
-<p><strong>App preferences.</strong> Settings and previously entered rows may be saved locally on your device so they persist between app sessions. This data never leaves your device.</p>
+<p><strong>App preferences and saved rows.</strong> Settings and any rows you choose to keep are saved locally on your device so they persist between app sessions. Saved rows never leave your device.</p>
+
+<p><strong>Crash diagnostics.</strong> If the app crashes, a diagnostic report is sent to Firebase Crashlytics so the fault can be found and fixed. A report contains the technical details of the failure — the error itself, the app version, and your device model and operating system version — together with an identifier Crashlytics generates for your installation of the app. It does not contain the lottery numbers you entered, and it is not linked to your name or to any account.</p>
+
+<p><strong>Notifications.</strong> If you allow notifications, the app reminds you after a draw that new results are available. These reminders are scheduled on your own device from the published draw calendar. Nothing about your numbers is sent anywhere to produce them, and a reminder never tells you whether you won — nothing outside your device knows your numbers.</p>
 
 <h2>What the app does not do</h2>
 <ul>
   <li>No advertising or ad networks</li>
-  <li>No analytics or tracking SDKs</li>
+  <li>No analytics, profiling, or tracking of how you use the app</li>
   <li>No sale or sharing of data with third parties</li>
   <li>No user accounts or sign-in</li>
 </ul>
+<p>Crash diagnostics, described above, are used only to find and fix faults — not to build a profile of you or to track your use of the app.</p>
 
 <h2>Security</h2>
 <p>Data sent to our backend is encrypted in transit (HTTPS/TLS). The app uses Google Play Integrity / Apple App Attest to verify that requests come from a genuine, unmodified copy of the app — this is a security check performed by Google/Apple and does not identify you personally.</p>
 
 <h2>Third-party services</h2>
-<p>The app's backend runs on Google Firebase (Cloud Functions and Firestore), hosted in the European Union (europe-west1).</p>
+<p>The app's backend runs on Google Firebase (Cloud Functions and Firestore), hosted in the European Union (europe-west1). Crash diagnostics are handled by Firebase Crashlytics, also a Google service.</p>
 
 <h2>Children's privacy</h2>
 <p>The app is not directed at children and does not knowingly collect data from children.</p>
